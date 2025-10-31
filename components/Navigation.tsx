@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { scrollToSection } from '@/lib/utils'
+import CalendlyButton from './CalendlyButton'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -27,10 +28,6 @@ export default function Navigation() {
   const handleNavClick = (href: string) => {
     scrollToSection(href)
     setIsMenuOpen(false)
-  }
-
-  const handleBookingClick = () => {
-    window.open('https://calendly.com/donna-donnagabriel-yy4/discovery-call', '_blank')
   }
 
   return (
@@ -70,12 +67,9 @@ export default function Navigation() {
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 ease-out group-hover:w-full group-hover:left-0"></span>
               </button>
             ))}
-            <button
-              onClick={handleBookingClick}
-              className="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-            >
+            <CalendlyButton className="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors">
               Book Discovery Call
-            </button>
+            </CalendlyButton>
           </div>
 
           {/* Mobile menu button */}
@@ -131,12 +125,11 @@ export default function Navigation() {
                   {link.name}
                 </button>
               ))}
-              <button
-                onClick={handleBookingClick}
+              <CalendlyButton
                 className="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
               >
                 Book Discovery Call
-              </button>
+              </CalendlyButton>
             </div>
           </div>
         )}

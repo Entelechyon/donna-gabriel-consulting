@@ -2,12 +2,9 @@
 
 import Image from 'next/image'
 import { scrollToSection } from '@/lib/utils'
+import CalendlyButton from './CalendlyButton'
 
 export default function Hero() {
-  const handleBookingClick = () => {
-    window.open('https://calendly.com/donna-donnagabriel-yy4/discovery-call', '_blank')
-  }
-
   const handleLearnMore = () => {
     scrollToSection('about')
   }
@@ -35,12 +32,9 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button
-                onClick={handleBookingClick}
-                className="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
+              <CalendlyButton className="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
                 Book a Discovery Call
-              </button>
+              </CalendlyButton>
 
               <button
                 onClick={handleLearnMore}

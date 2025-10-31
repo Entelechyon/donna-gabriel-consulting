@@ -2,13 +2,10 @@
 
 import { useState } from 'react'
 import { scrollToSection } from '@/lib/utils'
+import CalendlyButton from './CalendlyButton'
 
 export default function Services() {
   const [showModal, setShowModal] = useState(false)
-
-  const handleCalendlyClick = () => {
-    window.open('https://calendly.com/donna-donnagabriel-yy4/discovery-call', '_blank')
-  }
 
   const handleEnquireClick = () => {
     scrollToSection('contact')
@@ -32,7 +29,7 @@ export default function Services() {
       description:
         'Exclusive, tailored sessions for individuals ready for meaningful change. Together, we\'ll regulate your rhythm, liberate you from constraints, and reimagine your future.',
       cta: 'Apply Now',
-      action: handleCalendlyClick,
+      useCalendly: true,
     },
     {
       id: 2,
@@ -128,12 +125,18 @@ export default function Services() {
               </p>
 
               {/* CTA Button */}
-              <button
-                onClick={service.action}
-                className="w-full bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                {service.cta}
-              </button>
+              {service.useCalendly ? (
+                <CalendlyButton className="w-full bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                  {service.cta}
+                </CalendlyButton>
+              ) : (
+                <button
+                  onClick={service.action}
+                  className="w-full bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  {service.cta}
+                </button>
+              )}
             </div>
           ))}
         </div>
