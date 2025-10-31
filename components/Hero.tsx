@@ -16,8 +16,21 @@ export default function Hero() {
 
       <div className="container-custom">
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-          {/* Left Column - Text Content */}
-          <div className="space-y-4 sm:space-y-5 md:space-y-6 w-full">
+          {/* Hero Image - Shows FIRST on mobile, SECOND on desktop */}
+          <div className="relative h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl bg-black order-1 md:order-2">
+            <Image
+              src="/images/hero.webp"
+              alt="Donna Gabriel - Motivational Speaker and Coach"
+              fill
+              className="object-contain"
+              priority
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
+              quality={85}
+            />
+          </div>
+
+          {/* Text Content - Shows SECOND on mobile, FIRST on desktop */}
+          <div className="space-y-4 sm:space-y-5 md:space-y-6 w-full order-2 md:order-1">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight break-words">
               Donna Gabriel Consulting
             </h1>
@@ -43,19 +56,6 @@ export default function Hero() {
                 Learn More
               </button>
             </div>
-          </div>
-
-          {/* Right Column - Hero Image */}
-          <div className="relative h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl bg-black">
-            <Image
-              src="/images/hero.webp"
-              alt="Donna Gabriel - Motivational Speaker and Coach"
-              fill
-              className="object-contain"
-              priority
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
-              quality={85}
-            />
           </div>
         </div>
       </div>
