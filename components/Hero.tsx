@@ -32,7 +32,7 @@ export default function Hero() {
           {/* Text Content - Shows SECOND on mobile, FIRST on desktop */}
           <div className="space-y-4 sm:space-y-5 md:space-y-6 w-full order-2 md:order-1">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black leading-tight break-words">
-              Donna Gabriel Consulting
+              Donna Gabriel
             </h1>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent break-words">
