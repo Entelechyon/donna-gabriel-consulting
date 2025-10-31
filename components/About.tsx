@@ -18,7 +18,7 @@ export default function About() {
               src="/images/speaking.webp"
               alt="Donna Gabriel presenting"
               fill
-              className="object-contain"
+              className="object-contain scale-110"
               loading="lazy"
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
               quality={85}
