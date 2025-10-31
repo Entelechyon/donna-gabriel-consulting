@@ -32,12 +32,12 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
         isScrolled ? 'bg-white shadow-md' : 'bg-white/95'
       }`}
     >
-      <div className="container-custom px-6 md:px-12 lg:px-24">
-        <div className="flex items-center justify-between h-20">
+      <div className="w-full px-4 sm:px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
@@ -49,7 +49,7 @@ export default function Navigation() {
                 alt="DGC Logo"
                 width={80}
                 height={80}
-                className="h-12 w-auto"
+                className="h-10 sm:h-12 w-auto"
                 priority
               />
             </button>
@@ -114,19 +114,19 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden py-4 border-t border-gray-200 w-full">
+            <div className="flex flex-col space-y-4 w-full">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-black hover:text-primary transition-colors font-medium text-left"
+                  className="text-black hover:text-primary transition-colors font-medium text-left w-full"
                 >
                   {link.name}
                 </button>
               ))}
               <CalendlyButton
-                className="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+                className="w-full bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
               >
                 Book Discovery Call
               </CalendlyButton>

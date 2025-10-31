@@ -21,28 +21,28 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-white w-full">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 break-words">
             What People Say
           </h2>
-          <p className="text-xl text-gray-700">
+          <p className="text-lg sm:text-xl text-gray-700">
             Stories of transformation
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 w-full">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="bg-gray-light rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gray-light rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow w-full"
             >
               {/* Quote Icon */}
               <svg
-                className="w-10 h-10 text-primary/30 mb-4"
+                className="w-8 h-8 sm:w-10 sm:h-10 text-primary/30 mb-3 sm:mb-4"
                 fill="currentColor"
                 viewBox="0 0 32 32"
               >
@@ -50,22 +50,22 @@ export default function Testimonials() {
               </svg>
 
               {/* Content */}
-              <p className="text-gray-700 text-lg leading-relaxed mb-6 italic">
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6 italic">
                 &quot;{testimonial.content}&quot;
               </p>
 
               {/* Author */}
-              <div className="border-t-2 border-primary/20 pt-4">
-                <p className="font-bold text-black">{testimonial.author}</p>
-                <p className="text-primary text-sm">{testimonial.role}</p>
+              <div className="border-t-2 border-primary/20 pt-3 sm:pt-4">
+                <p className="font-bold text-black text-sm sm:text-base break-words">{testimonial.author}</p>
+                <p className="text-primary text-xs sm:text-sm">{testimonial.role}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Note for editing */}
-        <div className="mt-8 p-4 bg-accent/10 rounded-lg text-center">
-          <p className="text-gray-600 text-sm">
+        <div className="mt-6 sm:mt-8 p-4 bg-accent/10 rounded-lg text-center">
+          <p className="text-gray-600 text-xs sm:text-sm">
             <strong>Note:</strong> Testimonials are placeholders. Edit this component to add real testimonials at components/Testimonials.tsx
           </p>
         </div>

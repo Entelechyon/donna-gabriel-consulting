@@ -11,24 +11,24 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gray text-white">
+    <footer className="bg-gray text-white w-full">
       <div className="container-custom section-padding">
-        <div className="grid md:grid-cols-3 gap-12 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-6 sm:mb-8">
           {/* Left Column - Logo & Tagline */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">DGC</h3>
-            <p className="text-white/80 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 break-words">DGC</h3>
+            <p className="text-white/80 leading-relaxed text-sm sm:text-base">
               Inspiring People, Business, Government & Schools
             </p>
-            <p className="text-accent font-semibold mt-4">
+            <p className="text-accent font-semibold mt-3 sm:mt-4 text-sm sm:text-base">
               Get Donna & Get Moving!
             </p>
           </div>
 
           {/* Middle Column - Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm sm:text-base">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <button
@@ -44,26 +44,26 @@ export default function Footer() {
 
           {/* Right Column - Contact & Social */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Get In Touch</h4>
-            <div className="space-y-3 text-white/80">
+            <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Get In Touch</h4>
+            <div className="space-y-3 text-white/80 text-sm sm:text-base">
               <div>
-                <p className="font-medium text-white">Email</p>
+                <p className="font-medium text-white text-sm sm:text-base">Email</p>
                 <a
                   href="mailto:donna@donnagabriel.com.au"
-                  className="hover:text-white transition-colors break-all"
+                  className="hover:text-white transition-colors break-words text-xs sm:text-sm"
                 >
                   donna@donnagabriel.com.au
                 </a>
               </div>
-              <div className="pt-4">
-                <p className="font-medium text-white mb-2">ABN</p>
-                <p>39 897 178 146</p>
+              <div className="pt-3 sm:pt-4">
+                <p className="font-medium text-white mb-2 text-sm sm:text-base">ABN</p>
+                <p className="text-sm sm:text-base">39 897 178 146</p>
               </div>
 
               {/* Social Media Icons - Placeholders */}
-              <div className="pt-4">
-                <p className="font-medium text-white mb-3">Connect</p>
-                <div className="flex space-x-4">
+              <div className="pt-3 sm:pt-4">
+                <p className="font-medium text-white mb-3 text-sm sm:text-base">Connect</p>
+                <div className="flex space-x-3 sm:space-x-4">
                   {/* LinkedIn */}
                   <a
                     href="https://www.linkedin.com/in/donna-gabriel-34693812/"

@@ -86,11 +86,11 @@ export default function ChatbotWidget() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 bg-primary hover:bg-primary-dark text-white rounded-full p-4 shadow-2xl transition-all hover:scale-110"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-primary hover:bg-primary-dark text-white rounded-full p-3 sm:p-4 shadow-2xl transition-all hover:scale-110"
           aria-label="Open chat"
         >
           <svg
-            className="w-6 h-6"
+            className="w-5 h-5 sm:w-6 sm:h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -107,7 +107,7 @@ export default function ChatbotWidget() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-[380px] h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border-2 border-primary/20">
+        <div className="fixed inset-4 sm:bottom-6 sm:right-6 sm:inset-auto sm:w-[380px] sm:h-[600px] z-50 bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border-2 border-primary/20">
           {/* Header */}
           <div className="bg-primary text-white p-4 flex items-center justify-between">
             <div className="flex items-center space-x-3">

@@ -57,22 +57,22 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-gray-light">
+    <section id="contact" className="section-padding bg-gray-light w-full">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 break-words">
             Get In Touch
           </h2>
-          <p className="text-xl text-gray-700">
+          <p className="text-lg sm:text-xl text-gray-700">
             Ready to find your flourish? Let&apos;s start the conversation.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 w-full">
           {/* Left Column - Contact Form */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-black mb-6">
+          <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg w-full">
+            <h3 className="text-xl sm:text-2xl font-bold text-black mb-5 sm:mb-6 break-words">
               Send a Message
             </h3>
 
@@ -188,18 +188,18 @@ export default function Contact() {
           </div>
 
           {/* Right Column - Calendly & Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-black mb-6">
+          <div className="space-y-6 sm:space-y-8 w-full">
+            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg w-full">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-5 sm:mb-6 break-words">
                 Or Book Directly
               </h3>
 
               {/* Calendly Inline Widget */}
-              <div className="mb-6">
+              <div className="mb-5 sm:mb-6 w-full overflow-hidden">
                 <div
-                  className="calendly-inline-widget"
+                  className="calendly-inline-widget w-full"
                   data-url="https://calendly.com/donna-donnagabriel-yy4/discovery-call"
-                  style={{ minWidth: '320px', height: '700px' }}
+                  style={{ minWidth: '100%', height: '600px' }}
                 />
                 <Script
                   src="https://assets.calendly.com/assets/external/widget.js"
@@ -208,7 +208,7 @@ export default function Contact() {
               </div>
 
               {/* Direct Contact Info */}
-              <div className="pt-6 border-t-2 border-gray-200 space-y-4">
+              <div className="pt-5 sm:pt-6 border-t-2 border-gray-200 space-y-3 sm:space-y-4">
                 <div className="flex items-start space-x-3">
                   <svg
                     className="w-6 h-6 text-primary flex-shrink-0 mt-1"

@@ -9,29 +9,29 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding bg-white w-full">
       <div className="container-custom">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
           {/* Left Column - Image */}
-          <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl bg-white">
+          <div className="relative h-[350px] sm:h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-xl bg-white">
             <Image
               src="/images/speaking.webp"
               alt="Donna Gabriel presenting"
               fill
-              className="object-contain scale-125"
+              className="object-contain"
               loading="lazy"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 50vw"
               quality={85}
             />
           </div>
 
           {/* Right Column - Content */}
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-black">
+          <div className="space-y-4 sm:space-y-5 md:space-y-6 w-full">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black break-words">
               About Donna
             </h2>
 
-            <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-gray-700 text-base sm:text-lg leading-relaxed">
               <p>
                 Donna Gabriel is a lifelong educator, presenter, and dynamic coach who brings energy, creativity, and purpose to every interaction. With qualifications in education, drama, dance, and relationship coaching, Donna has spent decades helping people find their confidence and voice.
               </p>

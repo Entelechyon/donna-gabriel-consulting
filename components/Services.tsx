@@ -91,36 +91,36 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="section-padding bg-white">
+    <section id="services" className="section-padding bg-white w-full">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 break-words">
             Work With Me
           </h2>
-          <p className="text-xl text-gray-700">
+          <p className="text-lg sm:text-xl text-gray-700">
             Four ways we can work together
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 w-full">
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow"
+              className="bg-white border-2 border-gray-200 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow w-full"
             >
               {/* Icon */}
-              <div className="text-primary mb-4">{service.icon}</div>
+              <div className="text-primary mb-3 sm:mb-4">{service.icon}</div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-black mb-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 break-words">
                 {service.title}
               </h3>
-              <p className="text-primary font-medium mb-4">{service.subtitle}</p>
+              <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">{service.subtitle}</p>
 
               {/* Description */}
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6 text-sm sm:text-base">
                 {service.description}
               </p>
 
@@ -145,18 +145,18 @@ export default function Services() {
       {/* DGC Events Modal */}
       {showModal && (
         <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 w-full"
           onClick={() => setShowModal(false)}
         >
           <div
-            className="bg-white rounded-xl p-8 max-w-2xl w-full"
+            className="bg-white rounded-xl p-6 sm:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex justify-between items-start mb-6">
-              <h3 className="text-3xl font-bold text-black">DGC Events</h3>
+            <div className="flex justify-between items-start mb-4 sm:mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold text-black break-words pr-4">DGC Events</h3>
               <button
                 onClick={() => setShowModal(false)}
-                className="text-gray-500 hover:text-black"
+                className="text-gray-500 hover:text-black flex-shrink-0"
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -169,11 +169,11 @@ export default function Services() {
               </button>
             </div>
 
-            <div className="space-y-4 text-gray-700">
-              <p className="text-lg">
+            <div className="space-y-3 sm:space-y-4 text-gray-700">
+              <p className="text-base sm:text-lg">
                 DGC Events include:
               </p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
+              <ul className="list-disc list-inside space-y-2 ml-2 sm:ml-4 text-sm sm:text-base">
                 <li>
                   <strong>After Hours Events:</strong> Monthly social gatherings in supportive, creative environments
                 </li>
@@ -184,7 +184,7 @@ export default function Services() {
                   <strong>DGCreative:</strong> Creative arts program designed for self-expression and growth
                 </li>
               </ul>
-              <p className="pt-4">
+              <p className="pt-2 sm:pt-4 text-sm sm:text-base">
                 For more information, please contact Donna directly.
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function Services() {
                 setShowModal(false)
                 handleEnquireClick()
               }}
-              className="w-full mt-6 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="w-full mt-5 sm:mt-6 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base"
             >
               Get In Touch
             </button>

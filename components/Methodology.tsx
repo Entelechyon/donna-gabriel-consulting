@@ -47,40 +47,40 @@ export default function Methodology() {
   ]
 
   return (
-    <section id="methodology" className="section-padding bg-gray-light">
+    <section id="methodology" className="section-padding bg-gray-light w-full">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 break-words">
             Finding Your Flourish
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto px-4">
             My Three-Step Process for Growth
           </p>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12 w-full">
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow w-full"
             >
               {/* Icon */}
-              <div className="mb-6 flex justify-center">{step.icon}</div>
+              <div className="mb-4 sm:mb-6 flex justify-center">{step.icon}</div>
 
               {/* Title */}
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-black mb-2">
+              <div className="text-center mb-4 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 break-words">
                   {step.title}
                 </h3>
-                <p className="text-primary font-semibold text-lg">
+                <p className="text-primary font-semibold text-base sm:text-lg">
                   → {step.subtitle}
                 </p>
               </div>
 
               {/* Description */}
-              <p className="text-gray-700 leading-relaxed mb-6 text-center">
+              <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6 text-center text-sm sm:text-base">
                 {step.description}
               </p>
 
@@ -89,7 +89,7 @@ export default function Methodology() {
                 {step.keywords.map((keyword) => (
                   <span
                     key={keyword}
-                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium"
                   >
                     {keyword}
                   </span>
@@ -101,7 +101,7 @@ export default function Methodology() {
 
         {/* Bottom Text */}
         <div className="text-center">
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto border-t-2 border-primary/20 pt-8">
+          <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto border-t-2 border-primary/20 pt-6 sm:pt-8 px-4">
             This framework underpins everything I do — from one-on-one coaching to large-scale events.
           </p>
         </div>
