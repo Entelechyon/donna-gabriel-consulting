@@ -107,16 +107,16 @@ export default function ChatbotWidget() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed inset-4 sm:bottom-6 sm:right-6 sm:inset-auto sm:w-[380px] sm:h-[600px] z-50 bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border-2 border-primary/20">
+        <div className="fixed inset-0 sm:bottom-6 sm:right-6 sm:inset-auto sm:w-[380px] sm:h-[600px] sm:rounded-2xl w-full h-full max-w-full max-h-full z-[9999] bg-white shadow-2xl flex flex-col overflow-hidden border-0 sm:border-2 border-primary/20">
           {/* Header */}
-          <div className="bg-primary text-white p-4 flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold">DGC</span>
+          <div className="bg-primary text-white p-3 sm:p-4 flex items-center justify-between flex-shrink-0">
+            <div className="flex items-center space-x-2 sm:space-x-3 min-w-0">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-lg sm:text-xl font-bold">DGC</span>
               </div>
-              <div>
-                <h3 className="font-bold">Donna Gabriel Consulting</h3>
-                <p className="text-xs text-white/80">Ask me anything</p>
+              <div className="min-w-0">
+                <h3 className="font-bold text-sm sm:text-base truncate">Donna Gabriel Consulting</h3>
+                <p className="text-xs text-white/80 truncate">Ask me anything</p>
               </div>
             </div>
             <button
@@ -141,22 +141,22 @@ export default function ChatbotWidget() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+          <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gray-50 w-full">
             {messages.map((message, index) => (
               <div
                 key={index}
-                className={`flex ${
+                className={`flex w-full ${
                   message.role === 'user' ? 'justify-end' : 'justify-start'
                 }`}
               >
                 <div
-                  className={`max-w-[80%] rounded-2xl px-4 py-3 ${
+                  className={`max-w-[85%] sm:max-w-[80%] rounded-2xl px-3 sm:px-4 py-2 sm:py-3 break-words ${
                     message.role === 'user'
                       ? 'bg-primary text-white'
                       : 'bg-white text-gray-800 border border-gray-200'
                   }`}
                 >
-                  <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                  <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">
                     {message.content}
                   </p>
                 </div>
@@ -180,14 +180,14 @@ export default function ChatbotWidget() {
 
           {/* Quick Actions */}
           {messages.length <= 1 && (
-            <div className="p-3 border-t bg-white">
+            <div className="p-3 border-t bg-white flex-shrink-0 w-full">
               <p className="text-xs text-gray-600 mb-2">Quick questions:</p>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2 w-full">
                 {quickActions.map((action, index) => (
                   <button
                     key={index}
                     onClick={() => handleQuickAction(action)}
-                    className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-lg transition-colors text-left"
+                    className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2 sm:px-3 py-2 rounded-lg transition-colors text-left break-words"
                   >
                     {action}
                   </button>
@@ -197,20 +197,21 @@ export default function ChatbotWidget() {
           )}
 
           {/* Input */}
-          <form onSubmit={handleSubmit} className="p-4 border-t bg-white">
-            <div className="flex space-x-2">
+          <form onSubmit={handleSubmit} className="p-3 sm:p-4 border-t bg-white flex-shrink-0 w-full">
+            <div className="flex space-x-2 w-full">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your message..."
-                className="flex-1 px-4 py-2 border-2 border-gray-200 rounded-full focus:border-primary focus:outline-none text-sm"
+                className="flex-1 px-3 sm:px-4 py-2 border-2 border-gray-200 rounded-full focus:border-primary focus:outline-none text-base max-w-full"
+                style={{ fontSize: '16px' }}
                 disabled={isLoading}
               />
               <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
-                className="bg-primary hover:bg-primary-dark text-white rounded-full p-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="bg-primary hover:bg-primary-dark text-white rounded-full p-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex-shrink-0"
                 aria-label="Send message"
               >
                 <svg
