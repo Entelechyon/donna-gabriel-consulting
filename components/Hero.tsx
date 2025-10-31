@@ -36,7 +36,7 @@ export default function Hero() {
             </h1>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent break-words">
-              Get Donna & Get Moving!
+              Get Donna Get Moving!
             </h2>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
