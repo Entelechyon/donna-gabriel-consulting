@@ -19,7 +19,7 @@ export default function Methodology() {
       title: 'Self-Liberation',
       subtitle: 'Breaking the Limits',
       description:
-        'Release old patterns, expectations, and constraints. Step out of what holds you back and claim your agency.',
+        'Release old patterns, expectations, and constraints. Step out of what holds you back, making conscious choices to claim your independence.',
       keywords: ['Freedom', 'Empowerment', 'Release'],
       icon: (
         <svg className="w-16 h-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,7 +52,7 @@ export default function Methodology() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 break-words">
-            Finding Your Flourish
+            Find Your Flourish
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto px-4">
             My Three-Step Process for Growth

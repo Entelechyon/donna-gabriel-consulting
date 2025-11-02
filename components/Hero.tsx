@@ -40,7 +40,7 @@ export default function Hero() {
             </h2>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
-              Helping individuals and organizations find their flourish through purposeful change and personal growth
+              Helping individuals and organisations find their flourish through purposeful change and personal growth
             </p>
 
             {/* CTA Buttons */}

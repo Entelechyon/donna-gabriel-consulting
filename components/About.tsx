@@ -41,7 +41,7 @@ export default function About() {
               </p>
 
               <p>
-                From boardrooms to classrooms, dancefloors to auditoriums, Donna meets people where they are and guides them toward where they want to be.
+                From boardrooms to classrooms, dancefloors to auditoriums, Donna meets people where they are and motivates insight into action.
               </p>
             </div>
 

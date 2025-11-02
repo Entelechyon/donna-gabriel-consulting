@@ -81,10 +81,10 @@ export default function Services() {
           />
         </svg>
       ),
-      title: 'DGC Events',
-      subtitle: '(NDIS-Specific Programmes)',
+      title: 'DGC Training & Events',
+      subtitle: '(Growing social confidence and connection)',
       description:
-        'Safe, inclusive programs created to help participants discover their own flourish in supportive, creative settings. Includes social events, creative workshops, and community building.',
+        'Safe, inclusive programs created for neurodiverse adults to discover their own flourish in supportive, creative settings. Includes social events, creative workshops, and community building.',
       cta: 'Learn More',
       action: () => setShowModal(true),
     },
