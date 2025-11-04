@@ -2,7 +2,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      content: 'Donna has been a constant source of wisdom and grounding in my life — not through judgement or telling me what to do, but through her presence, compassion, and the gentle way she guides me back to myself. She holds space like no one else, allowing clarity and truth to surface naturally. I\'m endlessly grateful for the impact she\'s had on my life.',
+      content: 'Donna has been a constant source of wisdom and grounding in my life — not through judgement or telling me what to do, but through her presence, compassion, and the gentle way she guides me back to myself.<br /><br />She holds space like no one else, allowing clarity and truth to surface naturally.<br /><br />I\'m endlessly grateful for the impact she\'s had on my life.',
       author: 'Brooke L.',
       role: 'Client',
     },
@@ -38,11 +38,11 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="bg-gray-light rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow w-full"
+              className="bg-gray-light rounded-xl p-6 sm:p-10 shadow-lg hover:shadow-xl transition-shadow w-full"
             >
               {/* Quote Icon */}
               <svg
-                className="w-8 h-8 sm:w-10 sm:h-10 text-primary/30 mb-3 sm:mb-4"
+                className="w-8 h-8 sm:w-10 sm:h-10 text-primary/30 mb-4 sm:mb-6"
                 fill="currentColor"
                 viewBox="0 0 32 32"
               >
@@ -50,12 +50,13 @@ export default function Testimonials() {
               </svg>
 
               {/* Content */}
-              <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-5 sm:mb-6 italic">
-                &quot;{testimonial.content}&quot;
-              </p>
+              <div
+                className="text-gray-700 text-[1.0625rem] sm:text-[1.125rem] leading-[1.7] sm:leading-[1.8] mb-6 sm:mb-8 italic max-w-[700px] mx-auto px-2"
+                dangerouslySetInnerHTML={{ __html: `"${testimonial.content}"` }}
+              />
 
               {/* Author */}
-              <div className="border-t-2 border-primary/20 pt-3 sm:pt-4">
+              <div className="border-t-2 border-primary/20 pt-4 sm:pt-6 max-w-[700px] mx-auto">
                 <p className="font-bold text-black text-sm sm:text-base break-words">{testimonial.author}</p>
                 <p className="text-primary text-xs sm:text-sm">{testimonial.role}</p>
               </div>
