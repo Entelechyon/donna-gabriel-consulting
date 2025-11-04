@@ -2,9 +2,9 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      content: '[Testimonial content to be added]',
-      author: '[Client Name]',
-      role: '[Role/Organization]',
+      content: 'Donna has been a constant source of wisdom and grounding in my life — not through judgement or telling me what to do, but through her presence, compassion, and the gentle way she guides me back to myself. She holds space like no one else, allowing clarity and truth to surface naturally. I\'m endlessly grateful for the impact she\'s had on my life.',
+      author: 'Brooke L.',
+      role: 'Client',
     },
     {
       id: 2,
