@@ -2,15 +2,15 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      content: 'Donna has been a constant source of wisdom and grounding in my life — not through judgement or telling me what to do, but through her presence, compassion, and the gentle way she guides me back to myself.<br /><br />She holds space like no one else, allowing clarity and truth to surface naturally.<br /><br />I\'m endlessly grateful for the impact she\'s had on my life.',
+      content: 'Donna has been a constant source of wisdom & grounding in my life — not through judgement or telling me what to do, but through her presence, compassion, and the gentle way she guides me back to myself.<br /><br />She holds space like no one else, allowing clarity and truth to surface naturally.<br /><br />I\'m endlessly grateful for the impact she\'s had on my life.',
       author: 'Brooke L.',
       role: 'Client',
     },
     {
       id: 2,
-      content: '[Testimonial content to be added]',
-      author: '[Client Name]',
-      role: '[Role/Organization]',
+      content: 'No matter if it\'s in the classroom or the studio, Donna\'s lessons are always engaging, challenging, inspiring, and genuinely enjoyable.<br /><br />She nurtures lifelong learning and healthy minds, bodies, and souls, influencing the future choices of every student.<br /><br />In her supportive, judgment-free space, creativity thrives and teamwork comes naturally. Donna enriches lives every day and fun is always guaranteed.',
+      author: 'Elana T.',
+      role: 'Colleague',
     },
     {
       id: 3,

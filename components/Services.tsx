@@ -46,7 +46,7 @@ export default function Services() {
       title: 'Workshops & Programmes',
       subtitle: '(Organizations, Schools, Community Groups)',
       description:
-        'Bespoke workshops designed for teams that want to flourish together. Every experience blends creativity, facilitation, and connection — adaptable to boardrooms, classrooms, or creative spaces.',
+        'Workshops, designed for teams that want to flourish together. Every experience blends creativity, facilitation, and connection.<br />— Adaptable to boardrooms, classrooms, or creative spaces.',
       cta: 'Enquire',
       action: handleEnquireClick,
     },
@@ -120,9 +120,10 @@ export default function Services() {
               <p className="text-primary font-medium mb-3 sm:mb-4 text-sm sm:text-base">{service.subtitle}</p>
 
               {/* Description */}
-              <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6 text-sm sm:text-base">
-                {service.description}
-              </p>
+              <p
+                className="text-gray-700 leading-relaxed mb-5 sm:mb-6 text-sm sm:text-base"
+                dangerouslySetInnerHTML={{ __html: service.description }}
+              />
 
               {/* CTA Button */}
               {service.useCalendly ? (
